@@ -18,14 +18,8 @@ public class ProblemRepository {
     }
 
     public void saveAll(List<Problem> problems){
-        int cnt = 0;
         for(Problem p : problems){
             em.persist(p);
-            cnt++;
-            if(cnt == 500) {
-                em.flush();
-                cnt = 0;
-            }
         }
     }
 }

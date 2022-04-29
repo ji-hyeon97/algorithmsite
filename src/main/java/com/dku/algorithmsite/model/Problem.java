@@ -17,16 +17,9 @@ import javax.persistence.*;
 public class Problem {
 
     @Id
-    @GeneratedValue
-    private Long id;
-
     private int problem_number;
 
     private String tier_url;
 
     private String problem_name;
-
-    @Enumerated(EnumType.STRING)
-    @ColumnDefault("'NONE'")
-    private ProblemStatus status;
 }
