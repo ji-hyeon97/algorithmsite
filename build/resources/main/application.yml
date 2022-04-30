@@ -1,7 +1,7 @@
 server:
   port: 8000 # 서버 포트설정
-  servlet:
-    context-path: / # 진입점 : localhost:8000/
+#  servlet:
+#    context-path: / # 진입점 : localhost:8000/
 
 spring:
   datasource:
@@ -25,3 +25,8 @@ spring:
   jackson:
     serialization:
       fail-on-empty-beans: false
+
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp

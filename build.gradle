@@ -30,6 +30,9 @@ dependencies {
 	testImplementation 'org.springframework.security:spring-security-test'
 	compileOnly group: 'org.jsoup', name: 'jsoup', version: '1.11.3' // jsoup 라이브러리
 
+	// jsp, jstl
+	compileOnly 'javax.servlet:jstl'
+	compileOnly "org.apache.tomcat.embed:tomcat-embed-jasper"
 }
 
 tasks.named('test') {

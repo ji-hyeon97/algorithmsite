@@ -1,14 +1,14 @@
 server:
   port: 8000 # 서버 포트설정
-  servlet:
-    context-path: / # 진입점 : localhost:8000/
+#  servlet:
+#    context-path: / # 진입점 : localhost:8000/
 
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver # mysql 설정
     url: jdbc:mysql://localhost:3306/new_schema?serverTimezone=Asia/Seoul
     username: root
-    password:
+    password: hks13579
 
   jpa: # jpa 설정
     open-in-view: true # lazy Loading
@@ -25,3 +25,8 @@ spring:
   jackson:
     serialization:
       fail-on-empty-beans: false
+
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
