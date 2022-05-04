@@ -1,5 +1,6 @@
 package com.dku.algorithmsite.service;
 
+import com.dku.algorithmsite.dto.ProblemDTO;
 import com.dku.algorithmsite.model.Problem;
 import com.dku.algorithmsite.repository.ProblemRepository;
 import lombok.RequiredArgsConstructor;

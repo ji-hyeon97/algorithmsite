@@ -34,6 +34,12 @@ public class ProblemRepository {
         for(int i= resultList.size();i<problems.size()-resultList.size();i++){
             em.persist(problems.get(i));
         }
+    }
 
+    public List<Problem> find(int pageNum){
+        return em.createQuery("select p from Problem p",Problem.class)
+                .setFirstResult((pageNum-1)*100)
+                .setMaxResults(100)
+                .getResultList();
     }
 }
