@@ -1,20 +1,17 @@
 package com.dku.algorithmsite.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
 
 import javax.persistence.*;
-import java.time.LocalDateTime;
 
 @Entity
-@Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Board {
+@Getter
+@Table(name = "board")
+public class BoardEntity extends TimeEntity {
 
     @Id
     @GeneratedValue(generator = "system-uuid")
@@ -30,11 +27,4 @@ public class Board {
 
     @Lob
     private String content;
-
-    private LocalDateTime createdTime;
-
-    @PrePersist
-    public void createTime(){
-        createdTime = LocalDateTime.now();
-    }
 }
