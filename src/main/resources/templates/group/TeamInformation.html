@@ -3,6 +3,19 @@
 <head th:replace="layout/header :: header"/>
 </head>
 <body>
-<div th:replace="layout/footer :: footer"/>
+<div th:replace="layout/bodyHeader :: bodyHeader"/>
+<section class="mt-5 ps-5" style="background: #FFFEFE;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);border-radius: 10px;">
+        <div class="row">
+            <div class="col mt-5 ms-5">
+                <i class="fa-solid fa-user-group"></i>&nbsp;&nbsp;스터디 그룹 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                <button class="btn btn-outline-success" type="submit">그룹 만들기</button><br>
+                <p align="right">1개의 그룹만 참여 가능합니다</p>
+
+
+
+        </div></div>
+
+    <div th:replace="layout/footer :: footer"/>
+</section>
 </body>
 </html>

@@ -2,7 +2,6 @@ package com.dku.algorithmsite.model;
 
 import lombok.*;
 import org.hibernate.annotations.GenericGenerator;
-
 import javax.persistence.*;
 
 @Entity
@@ -14,16 +13,13 @@ import javax.persistence.*;
 public class BoardEntity extends TimeEntity {
 
     @Id
-    @GeneratedValue(generator = "system-uuid")
-    @GenericGenerator(name = "system-uuid",strategy = "uuid")
-    private String id;
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    private Long id;
 
     @Column(nullable = false,length = 100)
     private String title;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User user;
+    private String writer;
 
     @Lob
     private String content;

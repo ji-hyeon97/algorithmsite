@@ -11,8 +11,8 @@ import java.time.LocalDateTime;
 @ToString
 @NoArgsConstructor
 public class BoardDto {
-    private String id;
-    private User user;
+    private Long id;
+    private String writer;
     private String title;
     private String content;
     private LocalDateTime createdDate;
@@ -21,7 +21,7 @@ public class BoardDto {
     public BoardEntity toEntity(){
         BoardEntity boardEntity = BoardEntity.builder()
                 .id(id)
-                .user(user)
+                .writer(writer)
                 .title(title)
                 .content(content)
                 .build();
@@ -29,9 +29,9 @@ public class BoardDto {
     }
 
     @Builder
-    public BoardDto(String id, String title, String content, User user, LocalDateTime createdDate, LocalDateTime modifiedDate) {
+    public BoardDto(Long id, String title, String content, String writer, LocalDateTime createdDate, LocalDateTime modifiedDate) {
         this.id = id;
-        this.user = user;
+        this.writer= writer;
         this.title = title;
         this.content = content;
         this.createdDate = createdDate;
