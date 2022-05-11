@@ -4,51 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d7307c4-84e2-463a-95a6-13a10ad31934" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/dto/ProblemDTO$ProblemDTOBuilder.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/dto/ProblemDTO.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/templates/layout/bodyHeader.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/resources/main/templates/problem.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/dto/ProblemDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/layout/bodyHeader.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/problem.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.1/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/controller/BoardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/controller/BoardController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/controller/ProblemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/controller/ProblemController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/dto/BoardDto$BoardDtoBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/dto/BoardDto$BoardDtoBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/dto/BoardDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/dto/BoardDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/model/BoardEntity$BoardEntityBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/model/BoardEntity$BoardEntityBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/model/BoardEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/model/BoardEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/repository/ProblemRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/repository/ProblemRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/service/BoardService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/service/BoardService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/service/ProblemService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/service/ProblemService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/layout/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/layout/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/controller/BoardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/controller/ProblemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/controller/ProblemController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/dto/BoardDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/dto/BoardDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/model/BoardEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/model/BoardEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/repository/ProblemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/repository/ProblemRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/service/BoardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/service/ProblemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/service/ProblemService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/group/TeamInformation.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/group/TeamInformation.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layout/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout/header.html" afterDir="false" />
+    <list default="true" id="6d7307c4-84e2-463a-95a6-13a10ad31934" name="Changes" comment="feat : User,Board엔티티 연관관계분리, 공지사항 페이징처리">
+      <change beforePath="$PROJECT_DIR$/build/resources/main/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -295,7 +254,21 @@
       <option name="project" value="LOCAL" />
       <updated>1651640909707</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feat : User,Board엔티티 연관관계분리, 공지사항 페이징처리">
+      <created>1652259190919</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1652259190920</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat : User,Board엔티티 연관관계분리, 공지사항 페이징처리">
+      <created>1652259242730</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1652259242730</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,6 +289,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="feat : 공지사항구현, Header,Footer 분리" />
     <MESSAGE value="feat : 공지사항 구현, Header,Footer 분리" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat : 공지사항 구현, Header,Footer 분리" />
+    <MESSAGE value="feat : User,Board엔티티 연관관계분리, 공지사항 페이징처리" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat : User,Board엔티티 연관관계분리, 공지사항 페이징처리" />
   </component>
 </project>
