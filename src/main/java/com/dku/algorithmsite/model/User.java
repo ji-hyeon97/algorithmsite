@@ -33,6 +33,6 @@ public class User {
     @ColumnDefault("'USER'")
     private RoleType role;
 
-    @OneToOne(mappedBy = "user")
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
     private Team team;
 }

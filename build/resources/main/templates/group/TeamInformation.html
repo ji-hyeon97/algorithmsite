@@ -7,15 +7,46 @@
 <section class="mt-5 ps-5" style="background: #FFFEFE;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);border-radius: 10px;">
         <div class="row">
             <div class="col mt-5 ms-5">
-                <i class="fa-solid fa-user-group"></i>&nbsp;&nbsp;스터디 그룹 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                <button class="btn btn-outline-success" type="submit">그룹 만들기</button><br>
-                <p align="right">1개의 그룹만 참여 가능합니다</p>
+                <i class="fa-solid fa-user-group"></i>&nbsp;&nbsp;스터디 그룹&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="btn btn-outline-primary" type="submit">그룹 만들기</button><br>
+                <p align="right" bold>1개의 그룹만 참여 가능합니다</p>
+                <table class="table table-hover">
+                    <thead>
+                    <tr>
+                        <th class="one wide">번호</th>
+                        <th class="ten wide">이미지</th>
+                        <th class="three wide">팀 이름</th>
+                        <th class="one wide">회원수</th>
+                        <th class="three wide">그룹 참여하기</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr th:each="team : ${teamList}">
+                        <td>
+                            <span th:text="${team.id}"></span>
+                        </td>
+                        <td>
+                            <img th:src="${team.image_url}" style="width: 150px; height: 100px;">
+                        </td>
+                        <td>
+                            <span th:text="${team.name}"></span>
+                        </td>
+                        <td>
+                            <span th:text="${team.count}"></span>
+                        </td>
+                        <td>
+                            <button class="btn btn-outline-success" type="submit">그룹 참여하기</button>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
 
 
 
-        </div></div>
 
-    <div th:replace="layout/footer :: footer"/>
+            </div>
+        </div>
 </section>
+<div th:replace="layout/footer :: footer"/>
 </body>
 </html>
