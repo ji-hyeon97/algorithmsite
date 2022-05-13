@@ -15,7 +15,7 @@ public class TeamController {
 
     private TeamService teamService;
 
-    @GetMapping("/group")
+    @GetMapping("/team")
     public String group(Model model){
         List<TeamDto> teamList = teamService.getTeamList();
         model.addAttribute("teamList", teamList);

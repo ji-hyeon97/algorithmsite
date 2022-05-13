@@ -9,6 +9,9 @@
     }
 
     .box {
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
         width: 40rem;
         height: 80px;
         color: black;
@@ -22,12 +25,11 @@
         top: 0;
         width: 100%;
         height: 80px;
-        background: white;
+
         justify-content: space-between;
         flex-direction: column;
         padding: 16px;
-        border-radius: 16px;
-        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+
         transform-origin: top center;
         will-change: transform;
         overflow: hidden;
@@ -63,9 +65,10 @@
                     </div>
                 </div>
             </div>
+            <div style="text-align: center; margin-bottom: 20px; font-size: 15px;color: #777777">* 더블클릭하시면 문제가 추가됩니다.</div>
             <div id="problems"></div>
         </div>
-        <div class="col" style="">
+        <div class="col" style="border-left:1px solid #cccccc;">
             <div style="height: 800px;
     background-image: url(../img/bg_logo.png);
     background-size: 50rem;
@@ -73,17 +76,35 @@
     background-origin: content-box;
     padding-top: 15rem;
     opacity: 10%;"></div>
-            <div style="position: fixed; top:15em; right:2em;">
-                <div class="container">
-                    <div class="box">
-                        <div>gkdl</div>
+
+            <div style="position: fixed; top:10em; right:2em;height:70%;overflow: scroll;margin-bottom: 300px">
+                <div style="color: gray; font-weight: bold; font-size: 30px; padding-left:24px; margin-bottom: 10px">
+                    <div style="font-weight: bold;
+    color: white;
+    background-color: rgb(13, 19, 70);
+    width: 11rem;
+    text-align: center;
+    padding: 0.5rem 0;
+    border-radius: 10px;margin-bottom: 20px;">TodoList</div>
+                    <label>현재 시간 &nbsp&nbsp&nbsp</label><label id="clock"></label><br/>
+                    <span>
+                        <label style="font-size: 20px;color: #1496DF">추가한 문제 개수 : </label>
+                    </span>
+                    <span>
+                        <label id="problem_cnt" style="font-size: 20px;color: #1496DF">0개</label>&nbsp&nbsp&nbsp&nbsp<button type="button" class="btn btn-secondary" id="reset">초기화</button>&nbsp&nbsp&nbsp&nbsp<label style="font-size: 15px;color: #777777">* 더블클릭하시면 문제링크로 넘어갑니다.</label>
+                    </span>
+
+                </div>
+                <div class="container" id="todoList">
+                    <div class="box" style="text-align: center;">
+                        <div style="color:#cccccc; font-size: 20px">아직 담긴 문제가 없습니다.</div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
-    </div>
+</div>
 </div>
 
 
@@ -92,67 +113,6 @@
 
 <div th:replace="layout/footer :: footer"/>
 </body>
-<script>
-    const pb = document.querySelector("#problems");
-    const search = document.querySelector("#search_btn");
-
-    search.addEventListener('click',()=>{
-        pb.innerHTML = "";
-        const problem_number = document.querySelector("#example-search-input").value;
-        fetch(`https://solved.ac/api/v3/search/problem?query=${problem_number}`)
-            .then((response) => {return response.json()})
-            .then((json) => json.items)
-            .then((items) => {
-                if(items.length === 0){
-                    pb.innerHTML = "<div style='height: 50px;'></div><div style='text-align: center;font-weight: bold;color: gray'>No Search Result.</div>";
-                }else {
-                    for (let i = 0; i < items.length; i++) {
-                        let str = `
-                <div class="box"><div>
-                    <div class="content container">
-                        <div class="row align-col-center">
-                            <div class="col-md-1 text-center"><img src="https://d2gd6pc034wcta.cloudfront.net/tier/${items[i].level}.svg" height="20px" width="37px"></div>
-                            <div class="col-md-2">${items[i].problemId}</div>
-                            <div class="col-md-8">${items[i].titleKo}</div>
-                            <div class="col-md-1 text-center"><input class="form-check-input my-2" type="checkbox" value=""></div>
-                        </div>
-                        <div class="row" style="color:#1496DF; font-weight: bold; font-size: 15px">`
-                        for (let j = 0; j < items[i].tags.length; j++)
-                            str += `#${items[i].tags[j].displayNames[0].name} `;
-                        str += `</div></div></div></div>`;
-                        pb.innerHTML += str;
-                    }
-                }
-            })
-    });
-
-    window.onload(
-        fetch("https://solved.ac/api/v3/search/problem?query=&page=1")
-        .then((response) => {return response.json()})
-        .then((json) => json.items)
-        .then((items) => {
-            for(let i=0;i<items.length;i++){
-                let str = `
-                <div class="box"><div>
-                    <div class="content container">
-                        <div class="row align-col-center">
-                            <div class="col-md-1 text-center"><img src="https://d2gd6pc034wcta.cloudfront.net/tier/${items[i].level}.svg" height="20px" width="37px"></div>
-                            <div class="col-md-2">${items[i].problemId}</div>
-                            <div class="col-md-8">${items[i].titleKo}</div>
-                            <div class="col-md-1 text-center"><input class="form-check-input my-2" type="checkbox" value=""></div>
-                        </div>
-                        <div class="row" style="color:#1496DF; font-weight: bold; font-size: 15px">`
-                    for(let j=0;j<items[i].tags.length;j++)
-                        str += `#${items[i].tags[j].displayNames[0].name} `;
-                    str += `</div></div></div></div>`;
-                pb.innerHTML += str;
-            }
-        }));
-
-
-
-    // Option with less CPU usage, but also less FPS / smooth
-    // window.addEventListener('scroll', onScroll);
-
-</script>
+<script src="/js/problem/problemList.js"></script>
+<script src="/js/problem/todoList.js"></script>
 </html>

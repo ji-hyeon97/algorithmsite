@@ -17,8 +17,8 @@ public class ProblemController {
 
     @GetMapping("/problem")
     public String problemList(Model model){
-        List<Problem> problemList = problemRepository.find(1);
-        model.addAttribute("problemList",problemList);
+//        List<Problem> problemList = problemRepository.find(1);
+//        model.addAttribute("problemList",problemList);
         return "problem";
     }
 
