@@ -42,14 +42,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .csrf().disable()
                 .authorizeRequests()
-                    .antMatchers("/","/auth/**","/js/**","/css/**","/img/**","/dummy/**")
-                    .permitAll()
+                .antMatchers("/","/auth/**","/js/**","/css/**","/img/**","/dummy/**")
+                .permitAll()
                 .anyRequest()
-                    .authenticated()
+                .authenticated()
                 .and()
-                    .formLogin()
-                    .loginPage("/auth/login")
-                    .loginProcessingUrl("/auth/loginProc")
-                    .defaultSuccessUrl("/");
+                .formLogin()
+                .loginPage("/auth/login")
+                .loginProcessingUrl("/auth/loginProc")
+                .defaultSuccessUrl("/");
     }
 }

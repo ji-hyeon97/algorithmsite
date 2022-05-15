@@ -2,11 +2,11 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="layout/header :: header"/>
 <link rel="stylesheet" href="/css/index.css">
-
 <body>
     <div th:replace="layout/bodyHeader :: bodyHeader"/>
-    <section class="mt-5 ps-5" style="text-align:center;background: #FFFEFE;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);border-radius: 10px;">
-        <div class="container position-absolute px-5" style="background: #FFFEFE;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);border-radius: 10px;">
+
+    <div class="mt-5 ps-5" style="text-align:center;background: #FFFEFE;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);border-radius: 10px;">
+        <div class="container position-absolute px-3" style="background: #FFFEFE;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);border-radius: 10px;">
             <div class="row">
                 <div class="col mt-5 ms-5">
                     <h1 class="mg">공지사항</h1>
@@ -41,21 +41,19 @@
                 </tr>
                 </tbody>
             </table>
-        <div style="height: 30px;;"></div>
-            <div style="text-align: center;">
-                <button><i class="fa-solid fa-chevron-left"></i></button><button><i class="fa-solid fa-chevron-right"></i></button>
-            </div>
-            <div style="height: 50px;"></div>
         </div>
-            <div class="bg_logo"></div>
-        </div>
-    </section>
-
-    <div>
-    <span th:each="pageNum : ${pageList}" th:inline="text">
-        <a th:href="@{'/?page=' + ${pageNum}}">[[${pageNum}]]</a>
-    </span>
     </div>
+    <div style="height: 1px;"></div>
+    <div class="bg_logo"></div>
+
+    <div class="container" style="text-align: center;">
+        <div class="row">
+            <div class="col">
+        <ul class="pagination justify-content-center">
+    <span th:each="pageNum : ${pageList}" th:inline="text">
+        <li class="page-item"><a class="page-link" th:href="@{'/?page=' + ${pageNum}}">[[${pageNum}]]</a></li>
+    </span>
+        </ul></div></div></div>
 
     <div th:replace="layout/footer :: footer" />
 </body>

@@ -1,23 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/header :: header"/>
 </head>
-<body>
 <script>
-function getTime(){
-const date = new Date();
-const hours = (date.getHours()<10?'0':'') + date.getHours();
-const minutes = (date.getMinutes()<10?'0':'') + date.getMinutes();
-const seconds = (date.getSeconds()<10?'0':'') + date.getSeconds();
-clockTitle.innerText = `${hours}:${minutes}:${seconds}`;
-}
-function init(){
-getTime();
-setInterval(getTime,1000);
-}
-init();
+    var time = 3605;
+    var hour = "";
+    var min = "";
+    var sec = "";
+
+    var x = setInterval(function() {
+      hour = parseInt(time/3600);
+      min = parseInt((time-(3600*hour))/60);
+      sec = time%60;
+
+      document.getElementById("demo").innerHTML = "남은 시간 "+" "+" "+" "+" "+hour+":"+min+":"+sec;
+      time--;
+
+      if (time <0 ){
+        clearInterval(x);
+        document.getElementById("demo").innerHTML = "시간 초과";
+        }
+      }, 1000);
 </script>
+<body>
+    <div th:replace="layout/bodyHeader :: bodyHeader"/>
+    <section class="mt-5 ps-5" style="background: #FFFEFE;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);border-radius: 10px;">
+        <div class="row">
+            <div class="col mt-5 ms-5">
+            <i class="fa-solid fa-trophy"></i><span>&nbsp;&nbsp;대회</span>
+     <br><br>
+            <div id="demo" style="font-size:3.0em; color:blue"></div>
+    </div>
+        </div>
+    </section>
 </body>
 </html>

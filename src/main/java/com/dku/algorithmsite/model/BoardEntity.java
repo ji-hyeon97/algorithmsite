@@ -1,7 +1,6 @@
 package com.dku.algorithmsite.model;
 
 import lombok.*;
-import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
 
 @Entity
