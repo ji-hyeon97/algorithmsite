@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns:th = "http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon-96x96.png">-->
+<!--    <link rel="stylesheet" as="style" crossorigin-->
+<!--          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />-->
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"-->
+<!--          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">-->
+<!--    <link rel="stylesheet" href="/css/index.css">-->
+<!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"-->
+<!--            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"-->
+<!--            crossorigin="anonymous"></script>-->
+<!--    <script src="https://kit.fontawesome.com/4251e77ff2.js" crossorigin="anonymous"></script>-->
+<!--    <style>-->
+<!--        body, h1, h2, h3, h4, h5, h6, p, span, div {-->
+<!--            font-family: 'Pretendard';-->
+<!--        }-->
+<!--    </style>-->
+<!--    <title>단고리즘</title>-->
+<!--</head>-->
+<div class="bodyHeader" th:fragment="bodyHeader">
+<!-- 메뉴바 -->
+    <div style="height: 85px;"></div>
+<header class="border-bottom pt-1 pb-1 fixed-top" style="border-color: grey; border-bottom: 2rem; background-color: white">
+    <nav class="navbar navbar-expand-lg navbar-light mx-5 fs-6">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/"><img src="/img/logo.png" height="50px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item ms-5">
+                        <a class="nav-link" aria-current="page" href="/"><i class="fa-solid fa-house"></i></i>&nbsp;&nbsp;홈</a>
+                    </li>
+                    <li class="nav-item ms-5">
+                        <a class="nav-link" aria-current="page" href="/problem"><i class="fa-solid fa-book"></i>&nbsp;&nbsp;문제
+                            &nbsp&nbsp&nbsp<span id="problem_badge" class="translate-middle badge rounded-pill bg-danger">
+                                0
+                            </span></a>
+                    </li>
+                    <li class="nav-item ms-5">
+                        <a class="nav-link" href="/contest"><i class="fa-solid fa-trophy"></i>&nbsp;&nbsp;대회</a>
+                    </li>
+                    <li class="nav-item dropdown ms-5">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-user-group"></i>&nbsp;&nbsp;스터디 그룹
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/team">팀 정보</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">내 팀으로 이동</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- 로그인 전 -->
+                <ul sec:authorize="isAnonymous()" class="navbar-nav">
+                    <li class="nav-item ms-5">
+                        <a class="nav-link" aria-current="page" href="/auth/login">&nbsp;로그인</a>
+                    </li><li class="nav-item ms-3">
+                    <a class="nav-link" aria-current="page" href="/auth/signup">&nbsp;회원가입</a>
+                    </li>
+                </ul>
+                <!-- 로그인 후 -->
+                <ul sec:authorize="isAuthenticated()" class="navbar-nav">
+                    <li class="nav-item dropdown" style="width: 200px">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span th:text="${principal.getUsername()}"></span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">로그아웃</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- 여기까지 메뉴바 -->
+</div>
+</html>

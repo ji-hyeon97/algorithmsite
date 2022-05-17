@@ -1,0 +1,61 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="layout/header :: header"/>
+<link rel="stylesheet" href="/css/index.css">
+<body>
+    <div th:replace="layout/bodyHeader :: bodyHeader"/>
+
+    <div class="mt-5 ps-5" style="text-align:center;background: #FFFEFE;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);border-radius: 10px;">
+        <div class="container position-absolute px-3" style="background: #FFFEFE;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);border-radius: 10px;">
+            <div class="row">
+                <div class="col mt-5 ms-5">
+                    <h1 class="mg">공지사항</h1>
+                </div>
+            </div>
+            <div class="row" style="height: 60px;"></div>
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th scope="col">번호</th>
+                    <th scope="col">글제목</th>
+                    <th scope="col">작성자</th>
+                    <th scope="col">작성일</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <!-- CONTENTS !-->
+                <tr th:each="board : ${boardList}">
+                    <td>
+                        <span th:text="${board.id}"></span>
+                    </td>
+                    <td>
+                        <span th:text="${board.title}"></span>
+                    </td>
+                    <td>
+                        <span th:text="${board.writer}"></span>
+                    </td>
+                    <td>
+                        <span th:text="${#temporals.format(board.createdDate, 'yyyy-MM-dd HH:mm')}"></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div style="height: 1px;"></div>
+    <div class="bg_logo"></div>
+
+    <div class="container" style="text-align: center;">
+        <div class="row">
+            <div class="col">
+        <ul class="pagination justify-content-center">
+    <span th:each="pageNum : ${pageList}" th:inline="text">
+        <li class="page-item"><a class="page-link" th:href="@{'/?page=' + ${pageNum}}">[[${pageNum}]]</a></li>
+    </span>
+        </ul></div></div></div>
+
+    <div th:replace="layout/footer :: footer" />
+</body>
+</html>

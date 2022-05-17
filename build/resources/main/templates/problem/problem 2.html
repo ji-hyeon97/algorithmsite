@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="layout/header :: header"/>
+
+<style>
+    * {
+        position: relative;
+        box-sizing: border-box;
+    }
+
+    .box {
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        width: 40rem;
+        height: 80px;
+        color: black;
+        margin: 0 auto;
+        margin-bottom: 24px;
+    }
+
+    .box > div {
+        display: flex;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 80px;
+
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 16px;
+
+        transform-origin: top center;
+        will-change: transform;
+        overflow: hidden;
+        line-height: 20px;
+        font-size: 20px;
+    }
+
+    .content {
+        margin: 0 auto;
+    }
+
+    svg {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+<body>
+<div th:replace="layout/bodyHeader :: bodyHeader"/>
+<div style="height: 150px;"></div>
+<div class="mb-5">
+    <div class="row">
+        <div class="col">
+            <div class="box">
+                <div class="col-md-5 mx-auto">
+                    <div class="input-group">
+                        <input style="line-height:30px;border: none; border-radius: 0px; border-bottom: 1px solid gray" class="form-control" type="search" placeholder="문제번호를 입력해주세요. ex) 11001" id="example-search-input">
+                        <button id="search_btn" style="text-align: center; width:45px; height:45px; background-color:  rgb(13, 19, 70); border-radius: 5px">
+                            <i class="fas fa-search" style="color: white; line-height: 45px"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-bottom: 20px; font-size: 15px;color: #777777">* 더블클릭하시면 문제가 추가됩니다.</div>
+            <div id="problems"></div>
+        </div>
+        <div class="col" style="border-left:1px solid #cccccc;">
+            <div style="height: 800px;
+    background-image: url(../img/bg_logo.png);
+    background-size: 50rem;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    padding-top: 15rem;
+    opacity: 10%;"></div>
+
+            <div style="position: fixed; top:10em; right:2em;height:70%;overflow: scroll;margin-bottom: 300px">
+                <div style="color: gray; font-weight: bold; font-size: 30px; padding-left:24px; margin-bottom: 10px">
+                    <div style="font-weight: bold;
+    color: white;
+    background-color: rgb(13, 19, 70);
+    width: 11rem;
+    text-align: center;
+    padding: 0.5rem 0;
+    border-radius: 10px;margin-bottom: 20px;">TodoList</div>
+                    <label>현재 시간 &nbsp&nbsp&nbsp</label><label id="clock"></label><br/>
+                    <span>
+                        <label style="font-size: 20px;color: #1496DF">추가한 문제 개수 : </label>
+                    </span>
+                    <span>
+                        <label id="problem_cnt" style="font-size: 20px;color: #1496DF">0개</label>&nbsp&nbsp&nbsp&nbsp<button type="button" class="btn btn-secondary" id="reset">초기화</button>&nbsp&nbsp&nbsp&nbsp<label style="font-size: 15px;color: #777777">* 더블클릭하시면 문제링크로 넘어갑니다.</label>
+                    </span>
+                </div>
+                <div class="container" id="todoList">
+                    <div class="box" style="text-align: center;">
+                        <div style="color:#cccccc; font-size: 20px">아직 담긴 문제가 없습니다.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+<div th:replace="layout/footer :: footer"/>
+</body>
+<script src="/js/problem/problemList.js"></script>
+<script src="/js/problem/todoList.js"></script>
+</html>
