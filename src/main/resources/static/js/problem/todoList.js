@@ -25,6 +25,7 @@ function addEvent() {
 function todoListLoad(){
     if(problem_count !== 0) {
         document.querySelector("#problem_cnt").innerText = `${problem_count}개`;
+        refreshBadge();
         const todoListTab = document.querySelector('#todoList');
         let contents = "";
         for (let i = 0; i < problem_count; i++) {
@@ -51,6 +52,13 @@ reset.addEventListener('click',()=>{
     localStorage.clear();
     window.location.href = "./problem";
 });
+
+// problem badge
+const badge = document.querySelector("#problem_badge");
+
+const refreshBadge = ()=>{
+    badge.innerText = problem_count;
+};
 
 // clock
 const clockTitle = document.querySelector("#clock");

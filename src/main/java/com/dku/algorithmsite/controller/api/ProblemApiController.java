@@ -1,4 +1,4 @@
-package com.dku.algorithmsite.controller;
+package com.dku.algorithmsite.controller.api;
 
 import com.dku.algorithmsite.dto.ResponseDTO;
 import com.dku.algorithmsite.service.ProblemService;

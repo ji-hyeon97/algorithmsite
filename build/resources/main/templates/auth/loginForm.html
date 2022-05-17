@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="/layout/header.html :: header"/>
+<body>
+<div th:replace="layout/bodyHeader :: bodyHeader"/>
+<div class="container">
+    <div class="row" style="margin:50px auto">
+        <div class="col-md-6">
+            <img src="/img/bg_logo.png" width="100%" style="margin-top: 100px"/>
+        </div>
+        <div class="col-md-6" style="border-left:1px solid #cccccc;">
+            <div style="margin:0 auto;text-align:center;width: 70%;border:1px solid #cccccc;border-radius: 10px; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); background-color: white">
+                <img src="/img/logo.png" width="50%" style="margin: 30px auto">
+                <form action="/auth/loginProc" method="post">
+                    <div class="form-floating" style="margin:20px 65px;">
+                        <input type="text" class="form-control" name="username" id="username" placeholder="아이디">
+                        <label for="username">아이디</label>
+                    </div>
+                    <div class="form-floating" style="margin:20px 65px;">
+                        <input type="password" class="form-control" name="password" id="password" placeholder="비밀번호">
+                        <label for="password">비밀번호</label>
+                    </div>
+                    <div style="margin:50px 0px;">
+                        <button type="submit" id="login-btn" class="btn btn-primary" style="margin: 0px 50px;width:70%;border: 1px solid rgb(13, 19, 70);background-color: rgb(13, 19, 70);">로그인</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div th:replace="layout/footer :: footer"/>
+</body>
+</html>
