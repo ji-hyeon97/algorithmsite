@@ -9,7 +9,7 @@ import lombok.*;
 @ToString
 @NoArgsConstructor
 public class TeamDto {
-    private Long id;
+    private String id;
     private String image_url;
     private String name;
     private int count;
@@ -27,7 +27,7 @@ public class TeamDto {
     }
 
     @Builder
-    public TeamDto(Long id, String image_url, String name, int count, User user) {
+    public TeamDto(String id, String image_url, String name, int count, User user) {
         this.id = id;
         this.image_url = image_url;
         this.name = name;

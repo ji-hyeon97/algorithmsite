@@ -73,7 +73,7 @@
                 <!-- 로그인 후 -->
                 <ul sec:authorize="isAuthenticated()" class="navbar-nav">
                     <li class="nav-item dropdown" style="width: 200px">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownUsername" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             <span th:text="${principal.getUsername()}"></span>
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">

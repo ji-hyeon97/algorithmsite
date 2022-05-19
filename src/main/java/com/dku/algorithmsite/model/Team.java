@@ -10,11 +10,11 @@ import javax.persistence.*;
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Team {
-    @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private Long id;
 
-    @Column(nullable = true)
+    @Id
+    private String id;
+
+    @Column(columnDefinition = "TEXT")
     private String image_url;
 
     @Column(nullable = false)
@@ -24,12 +24,12 @@ public class Team {
     @ColumnDefault("0")
     private int count;
 
-    @OneToOne
+    @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private User user;
 
     @Builder
-    public Team(Long id, String image_url, String name, int count, User user) {
+    public Team(String id, String image_url, String name, int count, User user) {
         this.id = id;
         this.image_url = image_url;
         this.name = name;

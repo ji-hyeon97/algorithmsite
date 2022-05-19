@@ -15,8 +15,8 @@ import java.util.List;
 public class TeamService {
     private TeamRepository teamRepository;
 
-    public Long savePost(TeamDto teamDto) {
-        return teamRepository.save(teamDto.toEntity()).getId();
+    public void savePost(TeamDto teamDto) {
+       teamRepository.save(teamDto.toEntity());
     }
 
     @Transactional
@@ -24,7 +24,7 @@ public class TeamService {
         List<Team> teamEntities = teamRepository.findAll();
         List<TeamDto> boardDtoList = new ArrayList<>();
 
-        for ( Team teamEntity : teamEntities) {
+        for (Team teamEntity : teamEntities) {
             TeamDto teamDTO = TeamDto.builder()
                     .id(teamEntity.getId())
                     .image_url(teamEntity.getImage_url())
