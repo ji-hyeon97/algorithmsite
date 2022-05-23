@@ -24,6 +24,7 @@
                     <div style="margin:50px 0px;">
                         <button type="submit" id="login-btn" class="btn btn-primary" style="margin: 0px 50px;width:70%;border: 1px solid rgb(13, 19, 70);background-color: rgb(13, 19, 70);">로그인</button>
                     </div>
+                    <div th:if="${error} == true" th:text="로그인 정보가 올바르지 않습니다."/>
                 </form>
 
             </div>

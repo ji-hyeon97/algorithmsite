@@ -12,7 +12,12 @@ public class ContestController {
     @GetMapping("/contest")
     public String contest(Model model, @AuthenticationPrincipal PrincipalDetail principal){
         model.addAttribute("principal",principal);
-        return "contest/Contest";
+        return "contest/contest";
     }
 
+    @GetMapping("/contestForm")
+    public String contestForm(Model model, @AuthenticationPrincipal PrincipalDetail principal){
+        model.addAttribute("principal",principal);
+        return "contest/contestForm";
+    }
 }

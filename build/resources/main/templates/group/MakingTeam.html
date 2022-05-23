@@ -1,0 +1,47 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="layout/header :: header"/>
+<link rel="stylesheet" href="/css/index.css">
+<body>
+<div th:replace="layout/bodyHeader :: bodyHeader"/>
+
+
+<div class="container">
+    <div class="row" style="margin:50px auto">
+        <div class="col-md-6">
+            <img src="/img/study.png" width="100%" style="margin-top: 5px"/>
+        </div>
+        <div class="col-md-6" style="border-left:1px solid #cccccc;">
+            <div style="margin:0 auto;text-align:center;width: 70%;border:1px solid #cccccc;border-radius: 10px; box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25); background-color: white">
+                <h2 style="color: rgb(13, 19, 70); margin-top: 50px;">스터디 그룹 만들기</h2>
+                <form th:action="@{/team}" method="post" enctype="multipart/form-data">
+                <div class="form-floating" style="margin:20px 65px;">
+                    <input type="text" class="form-control" name="id" id="id" placeholder="번호">
+                    <label for="id">번호</label>
+                </div>
+
+                <div class="mb-3" style="margin:20px 65px;">
+                    <input type="file" class="form-control" name="file" id="image_url">
+                </div>
+
+                <div class="form-floating" style="margin:20px 65px;">
+                    <input type="text" class="form-control" name="name" id="name" placeholder="팀 이름">
+                    <label for="name">팀 이름</label>
+                </div>
+
+                <div class="form-floating" style="margin:20px 65px;">
+                    <input type="text" class="form-control" name="count" id="count" placeholder="회원수">
+                    <label for="count">회원수</label>
+                </div>
+
+                <div style="margin:20px 0px 40px 0px;">
+                    <button type="submit" class="btn btn-primary" style="margin: 0px 50px;width:70%;border: 1px solid rgb(13, 19, 70);background-color: rgb(13, 19, 70);">스터디 만들기</button>
+                </div>
+                </form></div>
+            </div>
+        </div>
+</div>
+<div th:replace="layout/footer :: footer" />
+</body>
+</html>

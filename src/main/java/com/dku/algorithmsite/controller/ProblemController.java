@@ -15,9 +15,6 @@ public class ProblemController {
 
     @GetMapping("/problem")
     public String problemList(Model model, @AuthenticationPrincipal PrincipalDetail principal){
-//        List<Problem> problemList = problemRepository.find(1);
-//        model.addAttribute("problemList",problemList);
-        System.out.println("principle: "+principal);
         model.addAttribute("principal",principal);
         return "/problem/problem";
     }
