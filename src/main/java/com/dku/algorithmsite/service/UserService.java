@@ -9,6 +9,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Optional;
+
 @Service
 @Slf4j
 @RequiredArgsConstructor
@@ -25,5 +27,11 @@ public class UserService {
         user.setPassword(encPassword);
         user.setRole(RoleType.USER);
         userRepository.signUp(user);
+    }
+
+    public boolean validBoj(String boj_name){
+        Optional<User> byBojName = userRepository.findByBojName(boj_name);
+        if(byBojName.isEmpty()) return false;
+        return true;
     }
 }

@@ -26,8 +26,17 @@
                         <label for="sno">학번</label>
                     </div>
                     <div class="form-floating" style="margin:20px 65px;">
-                        <input type="text" class="form-control" name="boj_username" id="boj_username" placeholder="백준 아이디">
-                        <label for="boj_username">백준 아이디</label>
+                        <div class="row">
+                            <div class="col">
+                                <input type="text" class="form-control" name="boj_username" id="boj_username" placeholder="백준 아이디">
+                            </div>
+                            <div class="col">
+                                <button id="valid-btn" class="btn btn-success">중복확인</button>
+                            </div>
+                        </div>
+                        <div class="row" id="valid-boj" style="text-align: center;">
+                            asdf
+                        </div>
                     </div>
 <!--                    <div>-->
 <!--                        <button type="submit" id="auth-btn" class="btn btn-primary" style="margin: 0px 50px;width:70%;border: 1px solid rgb(13, 19, 70);background-color: rgb(13, 19, 70);">백준 아이디 인증</button>-->
@@ -45,4 +54,5 @@
 <div th:replace="layout/footer :: footer"/>
 </body>
 <script src="/js/auth/join.js"></script>
+<script src="/js/auth/joinValid.js"></script>
 </html>

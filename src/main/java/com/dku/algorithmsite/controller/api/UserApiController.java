@@ -7,9 +7,7 @@ import com.dku.algorithmsite.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequiredArgsConstructor
@@ -23,4 +21,10 @@ public class UserApiController {
         return new ResponseDTO<Long>(HttpStatus.OK.value(), 1L);
     }
 
+    @GetMapping("/auth/valid_boj")
+    public ResponseDTO<Boolean> validBoj(@RequestParam("id") String boj_id){
+        boolean result = userService.validBoj(boj_id);
+        System.out.println("result = " + result);
+        return new ResponseDTO<Boolean>(HttpStatus.OK.value(), result);
+    }
 }
