@@ -34,7 +34,10 @@ public class TeamService {
 
             boardDtoList.add(teamDTO);
         }
-
         return boardDtoList;
+    }
+    @Transactional(readOnly = true)
+    public Team detail(String id) {
+        return teamRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("해당 id가 없습니다. id=" + id));
     }
 }

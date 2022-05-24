@@ -29,7 +29,7 @@
                             <img th:src="${team.image_url}" style="width: 150px; height: 100px;">
                         </td>
                         <td>
-                            <span th:text="${team.name}"></span>
+                            <a th:href="@{/team/{id}(id=${team.id})}"><span th:text="${team.name}"></span></a>
                         </td>
                         <td>
                             <span th:text="${team.count}"></span>
