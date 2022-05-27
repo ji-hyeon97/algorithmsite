@@ -16,6 +16,9 @@ public class ProblemController {
     @GetMapping("/problem")
     public String problemList(Model model, @AuthenticationPrincipal PrincipalDetail principal){
         model.addAttribute("principal",principal);
+        if(principal != null)
+            model.addAttribute("boj_username",principal.getBoj_username());
+
         return "/problem/problem";
     }
 

@@ -29,6 +29,9 @@ public class BoardController {
         model.addAttribute("boardList", boardList);
         model.addAttribute("pageList", pageList);
         model.addAttribute("principal",principal);
+        if(principal != null)
+            model.addAttribute("boj_username",principal.getBoj_username());
+
         return "index.html";
     }
 

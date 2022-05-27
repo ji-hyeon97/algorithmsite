@@ -28,6 +28,9 @@ public class TeamController {
         List<TeamDto> teamList = teamService.getTeamList();
         model.addAttribute("teamList", teamList);
         model.addAttribute("principal",principal);
+        if(principal != null)
+            model.addAttribute("boj_username",principal.getBoj_username());
+
         return "group/TeamInformation";
     }
 

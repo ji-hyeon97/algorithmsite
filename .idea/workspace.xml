@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d7307c4-84e2-463a-95a6-13a10ad31934" name="Changes" comment="feat : 공지사항 부트스트랩 페이지네이션도입, 상단 바에 홈화면 기능 추가, 대회기능 타이머 설정구현">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/config/WebSocketConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/handler/WebSocketHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/chatting/chat.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/default_profile.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.1/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.4.1/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.1/checksums/md5-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.4.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.1/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.1/executionHistory/executionHistory.lock" afterDir="false" />
@@ -18,15 +18,19 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/config/auth/PrincipalDetail.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/config/auth/PrincipalDetail.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/controller/BoardController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/controller/BoardController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/controller/ContestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/controller/ContestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/controller/ProblemController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/controller/ProblemController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/controller/TeamController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/controller/TeamController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/service/TeamService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/service/TeamService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/auth/signupForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/auth/signupForm.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/group/TeamInformation.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/group/TeamInformation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/layout/bodyHeader.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/layout/bodyHeader.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/config/auth/PrincipalDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/config/auth/PrincipalDetail.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/controller/BoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/controller/ContestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/controller/ContestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/controller/ProblemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/controller/ProblemController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/controller/TeamController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/controller/TeamController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/service/TeamService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/service/TeamService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/group/TeamInformation.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/group/TeamInformation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layout/bodyHeader.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout/bodyHeader.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,10 +131,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/model" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/img" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/static/img" />
       <recent name="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/model" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
@@ -138,10 +143,10 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/static/img" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static/css" />
       <recent name="$PROJECT_DIR$/src/main/resources/templates/problem" />
       <recent name="$PROJECT_DIR$/src/main/resources/templates" />
       <recent name="$PROJECT_DIR$/src/main/webapp" />
-      <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.dku.algorithmsite.service" />
@@ -151,7 +156,7 @@
       <recent name="com.dku.algorithmsite.announcement.domain.entity" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.AlgorithmsiteApplication">
+  <component name="RunManager" selected="Spring Boot.AlgorithmsiteApplication">
     <configuration name="AlgorithmsiteApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.dku.algorithmsite.AlgorithmsiteApplication" />
       <module name="algorithmsite.main" />
@@ -270,6 +275,8 @@
       <workItem from="1652443202220" duration="12035000" />
       <workItem from="1652663098811" duration="1381000" />
       <workItem from="1652674314822" duration="21100000" />
+      <workItem from="1653647727234" duration="182000" />
+      <workItem from="1653647933091" duration="718000" />
     </task>
     <task id="LOCAL-00001" summary="feat : 공지사항 구현, Header,Footer 분리">
       <created>1651640909705</created>
@@ -308,6 +315,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
