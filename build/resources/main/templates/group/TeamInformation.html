@@ -9,14 +9,12 @@
             <div class="col mt-5 ms-5">
                 <i class="fa-solid fa-user-group"></i>&nbsp;&nbsp;스터디 그룹&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 <a class="btn btn-outline-primary" type="button" href="gallery">그룹 만들기</a><br>
-                <p align="right" bold>1개의 그룹만 참여 가능합니다</p>
                 <table class="table table-hover">
                     <thead>
                     <tr>
                         <th class="one wide">번호</th>
                         <th class="ten wide">이미지</th>
-                        <th class="three wide">팀 이름</th>
-                        <th class="one wide">회원수</th>
+                        <th class="three wide">스터디 이름</th>
                         <th class="three wide">그룹 참여하기</th>
                     </tr>
                     </thead>
@@ -29,13 +27,10 @@
                             <img th:src="${team.image_url}" style="width: 150px; height: 100px;">
                         </td>
                         <td>
-                            <a th:href="@{/team/{id}(id=${team.id})}"><span th:text="${team.name}"></span></a>
+                            <span th:text="${team.name}"></span>
                         </td>
                         <td>
-                            <span th:text="${team.count}"></span>
-                        </td>
-                        <td>
-                            <button class="btn btn-outline-success" type="submit">그룹 참여하기</button>
+                            <button th:onclick="'location.href=\''+ @{/team/{id}(id=${team.id})} + '\''" class="btn btn-outline-success" type="submit">채팅방 참여하기</button>
                         </td>
                     </tr>
                     </tbody>

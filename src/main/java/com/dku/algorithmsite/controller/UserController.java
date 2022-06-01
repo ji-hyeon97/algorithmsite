@@ -22,6 +22,4 @@ public class UserController {
     public String signUpPage(){
         return "/auth/signupForm";
     }
-
-
 }
