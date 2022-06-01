@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Data
@@ -20,14 +22,15 @@ public class Contest {
     @GeneratedValue
     private Long id;
 
+    private String contest_name;
+
+    private String contest_description;
+
     private LocalDateTime startTime;
 
     private LocalDateTime endTime;
 
-    @ManyToOne
-    @JoinColumn(name="team_id")
-    private Team team;
+    @OneToMany(mappedBy = "contest", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Contest_Problem> contest_problem = new ArrayList<>();
 
-//    @OneToMany(mappedBy = "contest")
-//    private List<Contest_Problem> contest_problems = new ArrayList<>();
 }

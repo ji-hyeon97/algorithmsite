@@ -15,11 +15,11 @@ public class UserController {
 
     @GetMapping("/auth/login")
     public String loginPage(){
-        return "/auth/loginForm";
+        return "auth/loginForm";
     }
 
     @GetMapping("/auth/signup")
     public String signUpPage(){
-        return "/auth/signupForm";
+        return "auth/signupForm";
     }
 }

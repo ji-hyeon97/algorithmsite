@@ -18,9 +18,11 @@ public class Contest_Problem {
     @GeneratedValue
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "problem_id")
-    private Problem problem;
+    private int level;
+
+    private int problem_number;
+
+    private String problem_name;
 
     @ManyToOne
     @JoinColumn(name = "contest_id")
