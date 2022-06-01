@@ -1,41 +1,60 @@
-<!doctype html>
-<html xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head th:replace="layout/header :: header"/>
-</head>
 
 <body>
     <div th:replace="layout/bodyHeader :: bodyHeader"/>
     <section class="mt-5 ps-5" style="background: #FFFEFE;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);border-radius: 10px;">
         <div class="row">
             <div class="col mt-5 ms-5">
-            <i class="fa-solid fa-trophy"></i><span>&nbsp;&nbsp;대회 목록</span>
-     <br><br>
+            <i class="fa-solid fa-trophy"></i><span>&nbsp;&nbsp;대회 목록</span><br><br>
             <div id="demo" style="font-size:3.0em; color:blue"></div>
-    </div>
-            <a href="/contestForm" class="btn btn-primary">출제하기</a>
-        </div>
+            </div>
+
+            <div class="row" style="height: 60px;"></div>
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th class="one wide">번호</th>
+                    <th class="ten wide">대회</th>
+                    <th class="two wide">대회설명</th>
+                    <th class="three wide">시작시간</th>
+                    <th class="three wide">종료시간</th>
+                    <th class="ten wide">대회 입장</th>
+                </tr>
+                </thead>
+
+                <tbody>
+                <!-- CONTENTS !-->
+                <tr th:each="contest : ${contestList}">
+                    <td>
+                        <span th:text="${contest.id}"></span>
+                    </td>
+                    <td>
+                        <span th:text="${contest.contest_name}"></span>
+                    </td>
+                    <td>
+                        <span th:text="${contest.contest_description}"></span>
+                    </td>
+                    <td>
+                        <span th:text="${#temporals.format(contest.startTime, 'yyyy-MM-dd HH:mm:ss')}"></span>
+                    </td>
+                    <td>
+                        <span th:text="${#temporals.format(contest.endTime, 'yyyy-MM-dd HH:mm:ss')}"></span>
+                    </td>
+                    <td>
+                        <button class="btn btn-outline-info" type="submit">대회 참여하기</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <a href="/contestForm" class="btn btn-primary">대회 출제하기</a></div>
+        <div style="height:30px;"></div>
     </section>
 
 <div th:replace="layout/footer :: footer"/>
 </body>
-<script>
-    var time = 3605;
-    var hour = "";
-    var min = "";
-    var sec = "";
 
-    var x = setInterval(function() {
-        hour = parseInt(time/3600);
-        min = parseInt((time-(3600*hour))/60);
-        sec = time%60;
-
-        document.getElementById("demo").innerHTML = "남은 시간 "+" "+" "+" "+" "+hour+":"+min+":"+sec;
-        time--;
-
-        if (time <0 ){
-            clearInterval(x);
-            document.getElementById("demo").innerHTML = "시간 초과";
-        }
-    }, 1000);
-</script>
 </html>

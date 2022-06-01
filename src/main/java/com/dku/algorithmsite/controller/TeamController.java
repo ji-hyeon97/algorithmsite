@@ -35,7 +35,10 @@ public class TeamController {
     }
 
     @GetMapping("/gallery")
-    public String dispWrite() {
+    public String dispWrite(Model model,@AuthenticationPrincipal PrincipalDetail principal) {
+        model.addAttribute("principal",principal);
+        if(principal != null)
+            model.addAttribute("boj_username",principal.getBoj_username());
         return "group/MakingTeam.html";
     }
 
@@ -48,8 +51,11 @@ public class TeamController {
         return "redirect:/team";
     }
     @GetMapping("/team/{id}")
-    public String detail(@PathVariable String id, Model model) {
+    public String detail(@PathVariable String id, Model model, @AuthenticationPrincipal PrincipalDetail principal) {
         model.addAttribute("team", teamService.detail(id));
+        model.addAttribute("principal",principal);
+        if(principal != null)
+            model.addAttribute("boj_username",principal.getBoj_username());
         return "chatting/chat";
     }
 }
