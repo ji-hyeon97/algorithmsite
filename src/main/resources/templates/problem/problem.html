@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th = "http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head th:replace="layout/header :: header"/>
 
 <style>
@@ -54,7 +55,7 @@
 <div style="height: 150px;"></div>
 <div class="mb-5">
     <div class="row">
-        <div class="col">
+        <div class="col" id="search_form">
             <div class="box">
                 <div class="col-md-5 mx-auto">
                     <div class="input-group">
@@ -62,6 +63,100 @@
                         <button id="search_btn" style="text-align: center; width:45px; height:45px; background-color:  rgb(13, 19, 70); border-radius: 5px">
                             <i class="fas fa-search" style="color: white; line-height: 45px"></i>
                         </button>
+                    </div>
+                </div>
+            </div>
+            <div class="box" id="additional_search" style="display:none;">
+                <div class="input-group" >
+                    <div class="col-md-4 mx-auto">
+                        <label for="inputTier" style="font-size:0.7em;">Tier</label>
+                        <select id="inputTier" style="border:none;line-height:15px; border-radius: 0px; border-bottom:1px solid gray;" class="form-control">
+                            <option value="">난이도</option>
+                            <option value="*1..5" style="color: #ad5600;">Bronze</option>
+                            <option value="*6..10" style="color: #435f7a;">Silver</option>
+                            <option value="*11..15" style="color: #ec9a00;">Gold</option>
+                            <option value="*16..20" style="color: #27e2a4;">Platinum</option>
+                            <option value="*21..25" style="color: #00b4fc;">Diamond</option>
+                            <option value="*26..30" style="color: #ff0062;">Ruby</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4 ">
+                        <label for="inputTag" style="font-size:0.7em;">Tag</label>
+                        <select id="inputTag" style="border:none;line-height:15px; border-radius: 0px; border-bottom:1px solid gray;" class="form-control">
+                            <option value="" selected>알고리즘</option>
+                            <option value="%23math">수학</option>
+                            <option value="%23implementation">구현</option>
+                            <option value="%23dp">다이나믹 프로그래밍</option>
+                            <option value="%23graphs">그래프 이론</option>
+                            <option value="%23data_structures">자료 구조</option>
+                            <option value="%23string">문자열</option>
+                            <option value="%23greedy">그리디 알고리즘</option>
+                            <option value="%23bruteforcing">브루트포스 알고리즘</option>
+                            <option value="%23graph_traversal">그래프 탐색</option>
+                            <option value="%23sorting">정렬</option>
+                            <option value="%23number_theory">정수론</option>
+                            <option value="%23geometry">기하학</option>
+                            <option value="%23trees">트리</option>
+                            <option value="%23segtree">세그먼트 트리</option>
+                            <option value="%23binary_search">이분 탐색</option>
+                            <option value="%23bfs">너비 우선 탐색</option>
+                            <option value="%23simulation">시뮬레이션</option>
+                            <option value="%23arithmetic">사칙연산</option>
+                            <option value="%23dfs">깊이 우선 탐색</option>
+                            <option value="%23ad_hoc">애드 혹</option>
+                            <option value="%23combinatorics">조합론</option>
+                            <option value="%23prefix_sum">누적 합</option>
+                            <option value="%23constructive">구성적</option>
+                            <option value="%23case_work">많은 조건 분기</option>
+                            <option value="%23bitmask">비트마스킹</option>
+                            <option value="%23dijkstra">다익스트라</option>
+                            <option value="%23parsing">파싱</option>
+                            <option value="%23backtracking">백트래킹</option>
+                            <option value="%23disjoint_set">분리 집합</option>
+                            <option value="%23hash_set">해시를 사용한 집합과 맵</option>
+                            <option value="%23sweeping">스위핑</option>
+                            <option value="%23divide_and_conquer">분할 정복</option>
+                            <option value="%23tree_set">트리를 사용한 집합과 맵</option>
+                            <option value="%23priority_queue">우선순위 큐</option>
+                            <option value="%23stack">스택</option>
+                            <option value="%23dp_tree">트리에서의 다이나믹 프로그래밍</option>
+                            <option value="%23two_pointer">두 포인터</option>
+                            <option value="%23flow">최대 유량</option>
+                            <option value="%23primality_test">소수 판정</option>
+                            <option value="%23lazyprop">느리게 갱신되는 세그먼트 트리</option>
+                            <option value="%23dp_bitfield">비트필드를 이용한 다이나믹 프로그래밍</option>
+                            <option value="%23game_theory">게임 이론</option>
+                            <option value="%23arbitrary_precision">임의 정밀도/큰 수 연산</option>
+                            <option value="%23exponentiation_by_squaring">분할 정복을 이용한 거듭제곱</option>
+                            <option value="%23offline_queries">오프라인 쿼리</option>
+                            <option value="%23recursion">재귀</option>
+                            <option value="%23probability">확률론</option>
+                            <option value="%23parametric_search">매개 변수 탐색</option>
+                            <option value="%23knapsack">배낭 문제</option>
+                            <option value="%23sieve">에라토스테네스의 체</option>
+                            <option value="%23bipartite_matching">이분 매칭</option>
+                            <option value="%23precomputation">런타임 전의 전처리</option>
+                            <option value="%23mst">최소 스패닝 트리</option>
+                            <option value="%23lca">최소 공통 조상</option>
+                            <option value="%23coordinate_compression">값/좌표 압축</option>
+                            <option value="%23hashing">해싱</option>
+                            <option value="%23euclidean">유클리드 호제법</option>
+                            <option value="%23floyd_warshall">플로이드-와샬</option>
+                            <option value="%23topological_sorting">위상 정렬</option>
+                            <option value="%23scc">강한 연결 요소</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 ">
+                        <div class="form-check" style="zoom:0.7">
+                            <input type="checkbox" class="form-check-input" id="randomSort" value="&sort=random">
+                            <label class="form-check-label" for="randomSort">랜덤 순서</label>
+                        </div>
+                        <div class="form-check" style="zoom:0.7">
+                            <input type="checkbox" sec:authorize="isAnonymous()" class="form-check-input" id="doNotSolve" disabled>
+                            <input type="checkbox" sec:authorize="isAuthenticated()" class="form-check-input" id="doNotSolve" th:value="${boj_username}">
+                            <label class="form-check-label" for="doNotSolve">푼 문제 제외</label>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -107,11 +202,9 @@
 </div>
 
 
-
-
-
 <div th:replace="layout/footer :: footer"/>
 </body>
+
 <script src="/js/problem/problemList.js"></script>
 <script src="/js/problem/todoList.js"></script>
 </html>
