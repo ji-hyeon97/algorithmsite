@@ -2,6 +2,7 @@ const sel_btn = document.querySelector("#sel-btn");
 
 // 문제 리스트
 let pb_List = [];
+let problems = [];
 
 function isRandom(){
     const sel_isRandom = document.querySelector("#sel-isRandom");
@@ -34,16 +35,29 @@ function addEvent() {
 
     for (let i = 0; i < problemList.length; i++) {
         problemList[i].addEventListener('dblclick', (e)=>{
-            const tier = problemList[i].childNodes[1].childNodes[0].childNodes[1].childNodes[1].childNodes[1].childNodes[0].src;
-            const name = problemList[i].childNodes[1].childNodes[0].childNodes[1].childNodes[1].childNodes[3].childNodes[0].data;
-            const number = problemList[i].childNodes[1].childNodes[0].childNodes[1].childNodes[1].childNodes[5].childNodes[0].data;;
+            let tier = problemList[i].childNodes[1].childNodes[0].childNodes[1].childNodes[1].childNodes[1].childNodes[0].src;
+            tier = tier.split('/')[4];
+            tier = tier.split('.')[0];
+            tier *= 1;
+            let number = problemList[i].childNodes[1].childNodes[0].childNodes[1].childNodes[1].childNodes[3].childNodes[0].data;
+            number *= 1;
+            const name = problemList[i].childNodes[1].childNodes[0].childNodes[1].childNodes[1].childNodes[5].childNodes[0].data;;
 
             const object = `<tr>
-                    <td><img src="${tier}" height="20px" width="37px"></td>
-                    <td>${name}</td>
+                    <td><img src="https://d2gd6pc034wcta.cloudfront.net/tier/${tier}.svg" height="20px" width="37px"></td>
                     <td>${number}</td>
+                    <td>${name}</td>
                 </tr>`;
+
+            const json_data = {
+                "level" : tier,
+                "problem_number" : number,
+                "problem_name" : name
+            }
+
             pb_List.push(object);
+            problems.push(json_data);
+
             addPb_List();
         });
 
@@ -97,4 +111,31 @@ sel_btn.addEventListener('click',()=>{
                 }
             }})
         .then(()=>{addEvent()});
+});
+
+// 대회열기 JSON fetch
+const contest_open_btn = document.querySelector("#contest-open-btn");
+
+contest_open_btn.addEventListener('click',()=>{
+    const contest_name = document.querySelector("#contest-name").value;
+    const contest_description = document.querySelector("#contest-description").value;
+    const start_time = document.querySelector("#start-time").value;
+    let end_time = document.querySelector("#end-time").value; end_time *= 1;
+
+    const json_data = {
+        "contest_name" : contest_name,
+        "contest_description" : contest_description,
+        "start_time" : start_time,
+        "end_time" : end_time,
+        "problems" : problems
+    }
+
+    fetch("/contestForm/makeForm",{
+        method:'POST'
+        , headers:{'content-type':'application/json'}
+        ,body:JSON.stringify(json_data)})
+        .catch((error)=>{
+            alert(error);
+        });
+
 });

@@ -18,7 +18,6 @@ public class ContestDto {
 
     public Contest toEntity(){
         Contest contest = Contest.builder()
-                .id(id)
                 .contest_name(contest_name)
                 .contest_description(contest_description)
                 .startTime(startTime)
