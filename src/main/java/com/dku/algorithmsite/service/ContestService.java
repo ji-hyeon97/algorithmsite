@@ -38,6 +38,7 @@ public class ContestService {
                     .contest_description(contestEntity.getContest_description())
                     .startTime(contestEntity.getStartTime())
                     .endTime(contestEntity.getEndTime())
+                    .avg_level(contestEntity.getAvg_level())
                     .build();
 
             contestDtoList.add(contestDTO);
@@ -58,6 +59,7 @@ public class ContestService {
                     .contest_description(contestInfo.getContest_description())
                     .startTime(start_time)
                     .endTime(end_time)
+                    .avg_level(contestInfo.getAvg_level())
                     .build();
 
             Contest saveEntity = contestRepository.save(contest);

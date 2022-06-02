@@ -16,5 +16,6 @@ public class ContestMakeDTO {
     private String contest_description;
     private String start_time;
     private Integer end_time;
+    private Integer avg_level;
     private List<ContestProblemDTO> problems;
 }

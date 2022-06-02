@@ -14,6 +14,4 @@ public class ContestProblemDTO {
     private Integer level;
     private Integer problem_number;
     private String problem_name;
-
-
 }

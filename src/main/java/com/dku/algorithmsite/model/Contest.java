@@ -30,6 +30,8 @@ public class Contest {
 
     private LocalDateTime endTime;
 
+    private Integer avg_level;
+
     @OneToMany(mappedBy = "contest", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<Contest_Problem> contest_problem = new ArrayList<>();
 

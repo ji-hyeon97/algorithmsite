@@ -19,6 +19,7 @@
                     <th class="one wide">번호</th>
                     <th class="ten wide">대회</th>
                     <th class="two wide">대회설명</th>
+                    <th class="two wide">평균 난이도</th>
                     <th class="three wide">시작시간</th>
                     <th class="three wide">종료시간</th>
                     <th class="ten wide">대회 입장</th>
@@ -36,6 +37,9 @@
                     </td>
                     <td>
                         <span th:text="${contest.contest_description}"></span>
+                    </td>
+                    <td>
+                        <img th:src="'https://d2gd6pc034wcta.cloudfront.net/tier/'+${contest.avg_level}+'.svg'" width="20px;">
                     </td>
                     <td>
                         <span th:text="${#temporals.format(contest.startTime, 'yyyy-MM-dd HH:mm:ss')}"></span>

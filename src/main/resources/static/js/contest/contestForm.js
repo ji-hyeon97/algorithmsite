@@ -3,6 +3,8 @@ const sel_btn = document.querySelector("#sel-btn");
 // 문제 리스트
 let pb_List = [];
 let problems = [];
+let avg_level = 0;
+
 
 function isRandom(){
     const sel_isRandom = document.querySelector("#sel-isRandom");
@@ -22,11 +24,17 @@ function isRandom(){
 // pb_List 추가하기
 function addPb_List(){
     const select_problem_box = document.querySelector("#select-problem-box");
+    const img_avg_level = document.querySelector("#avg-level");
 
     select_problem_box.innerHTML = '';
     for(let i=0;i<pb_List.length;i++){
         select_problem_box.innerHTML += pb_List[i];
+        avg_level += problems[i]['level'];
     }
+    avg_level /= pb_List.length;
+    avg_level = parseInt(avg_level);
+
+    img_avg_level.src = `https://d2gd6pc034wcta.cloudfront.net/tier/${avg_level}.svg`;
 }
 
 // problemList mouseover, out EventListener
@@ -127,6 +135,7 @@ contest_open_btn.addEventListener('click',()=>{
         "contest_description" : contest_description,
         "start_time" : start_time,
         "end_time" : end_time,
+        "avg_level" : avg_level,
         "problems" : problems
     }
 
@@ -134,6 +143,7 @@ contest_open_btn.addEventListener('click',()=>{
         method:'POST'
         , headers:{'content-type':'application/json'}
         ,body:JSON.stringify(json_data)})
+        .then(()=>{window.location.href = "/contest"})
         .catch((error)=>{
             alert(error);
         });

@@ -79,10 +79,12 @@ async function make_html(solved, api){
                        <div class="col-md-1 text-center"><img src="https://d2gd6pc034wcta.cloudfront.net/tier/${items[i].level}.svg" height="20px" width="37px"></div>
                        <div class="col-md-2 problemId"`;
 
-                    if(solved.has(items[i].problemId))  str += `style="color:green;font-weight:bold;"`;
+                    if(solved.has(items[i].problemId))  str += `style="color:rgb(0, 159, 107);font-weight:bold;"`;
 
                     str += `>${items[i].problemId}</div>
-                    <div class="col-md-8">${items[i].titleKo}</div>
+                    <div class="col-md-8"`
+                    if(solved.has(items[i].problemId))  str += `style="color:rgb(0, 159, 107);font-weight:bold;"`;
+                    str += `>${items[i].titleKo}</div>
                     <div class="col-md-1 text-center"></div>
                     </div>
                     <div class="row" style="margin-top: 10px;color:#1496DF; font-weight: bold; font-size: 15px">`;
