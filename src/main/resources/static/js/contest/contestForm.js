@@ -27,6 +27,7 @@ function addPb_List(){
     const img_avg_level = document.querySelector("#avg-level");
 
     select_problem_box.innerHTML = '';
+    avg_level = 0;
     for(let i=0;i<pb_List.length;i++){
         select_problem_box.innerHTML += pb_List[i];
         avg_level += problems[i]['level'];
