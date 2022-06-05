@@ -48,7 +48,7 @@
                         <span th:text="${#temporals.format(contest.endTime, 'yyyy-MM-dd HH:mm:ss')}"></span>
                     </td>
                     <td>
-                        <button class="btn btn-outline-info" type="submit">대회 참여하기</button>
+                        <a th:href="'/contestDetail/'+${contest.getId()}" class="btn btn-outline-info">대회 참여하기</a>
                     </td>
                 </tr>
                 </tbody>

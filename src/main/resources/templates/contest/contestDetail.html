@@ -17,19 +17,20 @@
                 <p> / 종료 : </p><p id="et"th:text="${#temporals.format(contest.endTime, 'yyyy년 MM월 dd일 HH:mm')}"></p>
             </span><br>
             <span id="left_time"style="font-size:2.5em;display: flex;justify-content: center;"></span><br>
+            <div style="margin:0% 17%;">
+                <div class="card">
+                    <div class="card-header">대회 설명</div>
+                    <div class="card-body">
+                        <p class="card-text"th:text="${contest.contest_description}"></p>
+                    </div>
+                </div><br/><br/><br/>
+                <div id="problems" style="width:100%;display:none;"></div><br>
+            </div>
         </div>
     </div>
     <br>
 
-    <div style="margin:0% 17%;">
-        <div id="problems" style="width:100%;display:none;"></div><br>
-        <div class="card">
-            <div class="card-header">대회 설명</div>
-            <div class="card-body">
-                <p class="card-text"th:text="${contest.contest_description}"></p>
-            </div>
-        </div>
-    </div>
+
     <br><br>
 </section>
 

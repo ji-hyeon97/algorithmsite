@@ -22,6 +22,9 @@ function leftTime(){
         left_time.innerText = `시작까지 ${days}일 ${hours<10 ? '0'+hours : hours}시간 ${minutes<10 ? '0'+minutes : minutes}분 ${seconds<10 ? '0'+seconds : seconds}초`;
         pb.setAttribute('style','display:none;');
     }
+    else if(parseInt(now.getTime() - st.getTime()) === 0){
+        location.reload(); // 새로고침
+    }
     else if(now.getTime()<et.getTime()){
         let lt = et.getTime() - now.getTime();
         lt /= 1000;
