@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 @Controller
@@ -55,7 +54,7 @@ public class ContestController {
     }
 
     @GetMapping("/contestDetail/{id}")
-    public String detail(@PathVariable String id, Model model) {
+    public String detail(@PathVariable String id, Model model, @AuthenticationPrincipal PrincipalDetail principal) {
         Long contest_id = Long.parseLong(id);
         ContestDto contestDto = contestService.getById(contest_id);
         List<ContestProblemDTO> problems = contestService.getProblemsByContest_id(contest_id);
@@ -63,6 +62,11 @@ public class ContestController {
         model.addAttribute("contest",contestDto);
         model.addAttribute("problems",problems);
         model.addAttribute("bojs",bojs);
+
+        model.addAttribute("principal",principal);
+        if(principal != null)
+            model.addAttribute("boj_username",principal.getBoj_username());
+
         return "contest/contestDetail";
     }
 }

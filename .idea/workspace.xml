@@ -4,15 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6d7307c4-84e2-463a-95a6-13a10ad31934" name="Changes" comment="feat : 공지사항 부트스트랩 페이지네이션도입, 상단 바에 홈화면 기능 추가, 대회기능 타이머 설정구현">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/index.css" afterDir="false" />
+    <list default="true" id="6d7307c4-84e2-463a-95a6-13a10ad31934" name="Changes" comment="style : index.css 복구, bodyHeader.html 복구">
+      <change beforePath="$PROJECT_DIR$/.gradle/7.4.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.1/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.4.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/controller/ContestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/controller/ContestController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/resources/main/templates/layout/bodyHeader.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/layout/bodyHeader.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/controller/ContestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/controller/ContestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layout/bodyHeader.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout/bodyHeader.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -292,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654050349277</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="style : index.css 복구, bodyHeader.html 복구">
+      <created>1654396351710</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1654396351710</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -315,6 +327,7 @@
     <MESSAGE value="feat : 공지사항 구현, Header,Footer 분리" />
     <MESSAGE value="feat : User,Board엔티티 연관관계분리, 공지사항 페이징처리" />
     <MESSAGE value="feat : 긴급 대회 기능 수정 !!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat : 긴급 대회 기능 수정 !!!" />
+    <MESSAGE value="style : index.css 복구, bodyHeader.html 복구" />
+    <option name="LAST_COMMIT_MESSAGE" value="style : index.css 복구, bodyHeader.html 복구" />
   </component>
 </project>

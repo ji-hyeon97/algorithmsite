@@ -71,9 +71,10 @@
         fetch(`https://solved.ac/api/v3/user/show?handle=${boj_username.textContent}`)
             .then((response)=>{return response.json();})
             .then((items)=>{
-                if(img_url !== null)
+                if(img_url == null)
                     img_url.src = items['profileImageUrl'];
             });
+
     </script>
     <!-- 여기까지 메뉴바 -->
 </div>
