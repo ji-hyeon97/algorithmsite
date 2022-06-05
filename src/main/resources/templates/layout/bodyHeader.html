@@ -21,7 +21,6 @@
                         <li class="nav-item ms-5">
                             <a class="nav-link" aria-current="page" href="/problem"><i class="fa-solid fa-book"></i>&nbsp;&nbsp;문제
                                 &nbsp&nbsp&nbsp<span id="problem_badge" class="translate-middle badge rounded-pill bg-danger">
-                                0
                             </span></a>
                         </li>
                         <li class="nav-item ms-5">
@@ -66,7 +65,15 @@
         </nav>
     </header>
     <script>
-
+        document.querySelector("#problem_badge").innerText = localStorage.length;
+        const img_url = document.querySelector("#profile-img");
+        let boj_username = document.querySelector("#profile-bojusername");
+        fetch(`https://solved.ac/api/v3/user/show?handle=${boj_username.textContent}`)
+            .then((response)=>{return response.json();})
+            .then((items)=>{
+                if(img_url !== null)
+                    img_url.src = items['profileImageUrl'];
+            });
     </script>
     <!-- 여기까지 메뉴바 -->
 </div>
