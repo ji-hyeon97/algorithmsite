@@ -82,4 +82,33 @@ public class ContestService {
             return false;
         }
     }
+
+    public ContestDto getById(Long id){
+        Contest contest = contestRepository.getById(id);
+        return  ContestDto.builder()
+                .id(contest.getId())
+                .contest_name(contest.getContest_name())
+                .contest_description(contest.getContest_description())
+                .startTime(contest.getStartTime())
+                .endTime(contest.getEndTime())
+                .avg_level(contest.getAvg_level())
+                .build();
+    }
+
+    public List<ContestProblemDTO> getProblemsByContest_id(Long contest_id){
+        List<Contest_Problem> problems = contestProblemRepository.findByContest_id(contest_id);
+        List<ContestProblemDTO> problemDTOS = new ArrayList<>();
+        for(Contest_Problem problem : problems){
+            ContestProblemDTO problemDTO;
+            problemDTO = ContestProblemDTO.builder()
+                    .id(problem.getId())
+                    .level(problem.getLevel())
+                    .problem_number(problem.getProblem_number())
+                    .problem_name(problem.getProblem_name())
+                    .build();
+            problemDTOS.add(problemDTO);
+        }
+        return problemDTOS;
+    }
+
 }

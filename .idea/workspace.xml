@@ -5,27 +5,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6d7307c4-84e2-463a-95a6-13a10ad31934" name="Changes" comment="feat : 공지사항 부트스트랩 페이지네이션도입, 상단 바에 홈화면 기능 추가, 대회기능 타이머 설정구현">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/contestDetail.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/contest/contestDetail.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/contest/contestDetail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.4.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_05_05_8_59_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_2022_05_05_8_59_AM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/model/Contest$ContestBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/model/Contest$ContestBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/model/Contest.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/model/Contest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/problem/problemList.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/static/js/problem/problemList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/contest/contestForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/contest/contestForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/controller/ContestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/controller/ContestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/controller/GroupController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/controller/api/UserApiController 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/dku/algorithmsite/service/UserService 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/application 2.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/index 2.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/css/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/img/bg_logo 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/img/favicon-96x96 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/img/logo 2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/auth/join 2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/problem/problemList 2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/static/js/problem/todoList 2.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/auth/loginForm 2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/auth/signupForm 2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/contest/Contest 2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/group/MyTeam 2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/group/TeamInformation 2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/index 2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/layout/bodyHeader 2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/layout/bodyHeader.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/layout/bodyHeader.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/layout/footer 2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/layout/header 2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/problem/problem 2.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/dto/ContestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/dto/ContestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/dto/ContestMakeDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/dto/ContestMakeDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/dto/ContestProblemDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/dto/ContestProblemDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/model/Contest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/model/Contest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/controller/ContestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/controller/ContestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/repository/ContestProblemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/repository/ContestProblemRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/repository/ContestRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/repository/ContestRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/service/ContestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/service/ContestService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/contest/contestForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/contest/contestForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/problem/problemList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/problem/problemList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/contest/contest.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/contest/contest.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/contest/contestForm.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/contest/contestForm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/dku/algorithmsite/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layout/bodyHeader.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout/bodyHeader.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,9 +94,9 @@
         <option value="Enum" />
         <option value="JUnit5 Test Class" />
         <option value="JavaScript File" />
-        <option value="HTML File" />
         <option value="Class" />
         <option value="Interface" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -127,6 +153,9 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/img" />
+    <property name="project.structure.last.edited" value="SDK" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -151,7 +180,7 @@
       <recent name="com.dku.algorithmsite.announcement.domain.entity" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.AlgorithmsiteApplication">
+  <component name="RunManager" selected="애플리케이션.AlgorithmsiteApplication">
     <configuration name="AlgorithmsiteApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.dku.algorithmsite.AlgorithmsiteApplication" />
       <module name="algorithmsite.main" />
@@ -237,7 +266,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.AlgorithmsiteApplication" />
         <item itemvalue="Gradle.ProblemServiceTest" />
         <item itemvalue="Gradle.ProblemServiceTest.refreshTest" />
         <item itemvalue="Gradle.ProblemServiceTest.speedTest" />
@@ -318,7 +346,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />

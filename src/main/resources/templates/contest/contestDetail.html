@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="layout/header :: header">
+
+</head>
+
+<body>
+<div th:replace="layout/bodyHeader :: bodyHeader"/>
+
+<section class="mt-5" style="background: #FFFEFE;box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);border-radius: 10px;">
+    <div class="row">
+        <div class="col mt-5">
+            <span th:text="${contest.contest_name}" style="font-size:3.5em;display: flex;justify-content: center;">&nbsp;&nbsp;대회 목록</span>
+            <span style="font-size:1.1em;display: flex;justify-content: center;color:grey">
+                <p>시작 : </p><p id="st"th:text="${#temporals.format(contest.startTime, 'yyyy년 MM월 dd일 HH:mm')}"></p>
+                <p> / 종료 : </p><p id="et"th:text="${#temporals.format(contest.endTime, 'yyyy년 MM월 dd일 HH:mm')}"></p>
+            </span><br>
+            <span id="left_time"style="font-size:2.5em;display: flex;justify-content: center;"></span><br>
+        </div>
+    </div>
+    <br>
+
+    <div style="margin:0% 17%;">
+        <div id="problems" style="width:100%;display:none;"></div><br>
+        <div class="card">
+            <div class="card-header">대회 설명</div>
+            <div class="card-body">
+                <p class="card-text"th:text="${contest.contest_description}"></p>
+            </div>
+        </div>
+    </div>
+    <br><br>
+</section>
+
+<div th:replace="layout/footer :: footer"/>
+</body>
+
+
+<script th:inline="javascript">
+     /*<![CDATA[*/
+        let contest = /*[[ ${contest} ]]*/;
+        let problems = /*[[ ${problems} ]]*/;
+        let bojs = /*[[ ${bojs} ]]*/;
+        /*]]*/
+</script>
+
+<script src="/js/contest/contestDetail.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<style>
+    * {
+        position: relative;
+        box-sizing: border-box;
+    }
+
+    .box {
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        width: 50rem;
+        height: 100px;
+        color: black;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+
+    .box > div {
+        display: flex;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 80px;
+
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 35px;
+
+        transform-origin: top center;
+        will-change: transform;
+        overflow: hidden;
+        font-size: 25px;
+    }
+
+    .content {
+        margin: 0 auto;
+    }
+
+    svg {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+</html>

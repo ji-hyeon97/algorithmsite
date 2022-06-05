@@ -44,4 +44,10 @@ public class UserRepository {
 
         return user.stream().findAny();
     }
+
+    public List<User> findAll(){
+        List<User> user = em.createQuery("select u from User u", User.class)
+                .getResultList();
+        return user;
+    }
 }
