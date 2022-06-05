@@ -71,7 +71,7 @@
         fetch(`https://solved.ac/api/v3/user/show?handle=${boj_username.textContent}`)
             .then((response)=>{return response.json();})
             .then((items)=>{
-                if(img_url == null)
+                if(img_url !== null)
                     img_url.src = items['profileImageUrl'];
             });
 
