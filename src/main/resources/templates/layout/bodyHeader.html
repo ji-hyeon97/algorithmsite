@@ -51,7 +51,7 @@
                     <ul sec:authorize="isAuthenticated()" class="navbar-nav">
                         <li class="nav-item dropdown" style="width: 300px">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownUsername" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                <img id="profile-img" src="/img/default_profile.png" width="30px" style="border-radius: 100%;"/>&nbsp
+                                <img id="profile-img" src="img/default_profile.png" width="30px" style="border-radius: 100%;"/>&nbsp
                                 <span th:text="${principal.getUsername()}"></span>
                                 <span id="profile-bojusername" th:text="${boj_username}" style="display: none;"></span>
                             </a>
@@ -71,8 +71,10 @@
         fetch(`https://solved.ac/api/v3/user/show?handle=${boj_username.textContent}`)
             .then((response)=>{return response.json();})
             .then((items)=>{
-                if(img_url !== null)
+                if(items['profileImageUrl'] !== null)
                     img_url.src = items['profileImageUrl'];
+                else
+                    img_url.src = 'img/default_profile.png';
             });
 
     </script>
